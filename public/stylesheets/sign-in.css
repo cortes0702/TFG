@@ -1,0 +1,251 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap");
+
+body {
+  margin: 0;
+  padding: 0;
+  background: linear-gradient(to bottom, #944960, #f59572);
+  height: 100vh;
+  background-size: cover;
+  background-position-y: center;
+}
+
+#bodySignin {
+  display: block;
+  justify-content: center;
+  align-items: center;
+  padding-top: 4%;
+  height: 80vh;
+  font-family: "Poppins", sans-serif;
+}
+
+.error {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: auto auto 1% auto;
+  padding: 1%;
+  width: 68em;
+  border-radius: 10px;
+  background-color: tomato;
+  color: white;
+}
+
+.login-container {
+  height: 43.75em;
+  width: 70em;
+  margin: auto;
+  border-radius: 10px;
+  display: flex;
+  justify-content: center;
+  overflow: hidden;
+  background-color: rgba(250, 250, 250, 0.8);
+}
+
+.login-info-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 15vh auto auto auto;
+  width: 50%;
+  height: 65vh;
+  background-color: var(--login-bg);
+}
+
+.image-container {
+  padding: 2rem;
+  width: 50%;
+  background-color: var(--image-bg);
+  box-sizing: border-box;
+}
+
+.title {
+  text-transform: capitalize;
+  font-size: 2.25rem;
+  font-weight: 600;
+  letter-spacing: 1px;
+  color: var(--title-bg);
+  margin-bottom: 2rem;
+}
+
+.login-info-container>p {
+  font-size: 1.25em;
+  margin-top: 1.5em;
+}
+
+.inputs-container {
+  height: 55%;
+  width: 85%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.input,
+.btn {
+  width: 90%;
+  height: 3.125rem;
+  font-size: 1em;
+}
+
+.input {
+  padding-left: 20px;
+  border: none;
+  border-radius: 5px;
+  font-weight: 600;
+  letter-spacing: 1px;
+  box-sizing: border-box;
+  outline: 0;
+  transition: 0.3s ease-in-out;
+}
+
+.input:hover {
+  border: none;
+}
+
+.input:focus {
+  padding: 7%;
+  transition: 0.3s ease-in-out;
+}
+
+.inputs-container p {
+  margin: 0;
+}
+
+.span {
+  color: var(--light-pink);
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.span a {
+  text-decoration: none;
+  color: #af2424;
+}
+
+.home {
+  display: flex;
+  text-align: center;
+  align-items: center;
+  font-size: 18px;
+  text-decoration: none;
+}
+
+.cssbuttons-io-button {
+  background: #944960;
+  color: white;
+  font-family: inherit;
+  padding: 0.35em;
+  padding-left: 7.5em;
+  font-size: 17px;
+  font-weight: 500;
+  border-radius: 0.9em;
+  border: none;
+  letter-spacing: 0.05em;
+  display: flex;
+  align-items: center;
+  box-shadow: inset 0 0 1.6em -0.6em #6d3546;
+  overflow: hidden;
+  position: relative;
+  height: 2.8em;
+  padding-right: 7.5em;
+  cursor: pointer;
+}
+
+.cssbuttons-io-button .icon {
+  background: white;
+  margin-left: 1em;
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 2.2em;
+  width: 2.2em;
+  border-radius: 0.7em;
+  box-shadow: 0.1em 0.1em 0.6em 0.2em #944960;
+  right: 0.3em;
+  transition: all 0.3s;
+}
+
+.cssbuttons-io-button:hover .icon {
+  width: calc(100% - 0.6em);
+}
+
+.cssbuttons-io-button .icon svg {
+  width: 1.1em;
+  transition: transform 0.3s;
+  color: #944960;
+}
+
+.cssbuttons-io-button:hover .icon svg {
+  transform: translateX(0.1em);
+}
+
+.cssbuttons-io-button:active .icon {
+  transform: scale(0.95);
+}
+
+@media screen and (max-width: 1000px) {
+  .error {
+    width: 68%;
+  }
+  
+  .login-container {
+    width: 70%;
+    height: 100%;
+    margin-top: 1rem;
+  }
+
+  .login-info-container {
+    width: 100%;
+    border-radius: 5px;
+  }
+
+  .image-container {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 650px) {
+  .error {
+    width: 88%;
+  }
+  
+  .login-container {
+    width: 90%;
+    height: 100%;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .login-container {
+    height: 100%;
+  }
+
+  .social-login {
+    flex-direction: column;
+    align-items: center;
+    height: 30%;
+  }
+
+  .login-info-container>p {
+    margin: 0;
+  }
+}
+
+@keyframes pulse {
+	0% {
+		transform: scale(0.95);
+		box-shadow: 0 0 0 0 rgba(235, 235, 235, 0.4);
+	}
+
+	70% {
+		transform: scale(1);
+		box-shadow: 0 0 0 10px rgba(235, 235, 235, 0.4);
+	}
+
+	100% {
+		transform: scale(0.95);
+		box-shadow: 0 0 0 0 rgba(235, 235, 235, 0.4);
+	}
+}

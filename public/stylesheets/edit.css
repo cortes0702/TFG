@@ -1,0 +1,77 @@
+#bodyEdit {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    margin: 3.95% auto 1% auto;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+.card {
+    width: 40%;
+    border-radius: 5px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+    overflow: hidden;
+    text-align: center;
+    transition: all 0.25s;
+    background-color: rgba(255, 255, 255, 1);
+    padding-bottom: 1.5%;
+    border-top: 4px solid rgb(148, 31, 31);
+}
+
+.title {
+    font-size: 30px;
+    font-weight: 600;
+}
+
+h5 {
+    font-size: 15px;
+    text-align: left;
+    margin: 0 2% 0 8%;
+}
+
+#bodyCreate .card form {
+    display: block;
+    justify-content: center;
+    margin: auto;
+}
+
+input[type="text"] {
+    display: block;
+    justify-content: center;
+    margin: 2% auto 3% auto;
+    width: 80%;
+    padding: 10px;
+    outline: none;
+    border: 2px solid #d4d4d4;
+    font-weight: 600;
+    border-radius: 5px;
+}
+
+input[type="submit"] {
+    margin: 2% auto 2% auto;
+    width: 85%;
+    padding: 10px;
+    outline: none;
+    font-weight: 600;
+    border-radius: 5px;
+    cursor: pointer;
+    background-color: rgb(148, 31, 31);
+    color: white;
+    border: none;
+}
+
+/*TABLET*/
+@media only screen and (max-width: 1024px) {
+    .card {
+        width: 90%;
+        margin: 5% auto 2% auto;
+    }
+}
+
+/*MÓVIL*/
+@media only screen and (max-width: 600px) {
+    .card {
+        width: 90%;
+        margin: 10% auto 2% auto;
+    }
+}

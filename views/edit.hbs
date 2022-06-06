@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Configuration Max</title>
+    <link rel="icon" type="image/x-icon" href="../img/favicon.ico">
+    <link rel="stylesheet" href="/stylesheets/edit.css">
+</head>
+
+<body>
+    {{> navbar}}
+    <br>
+    <section id="bodyEdit">
+        <div class="card">
+            <h1 class="title">Edit Max command</h1>
+            <form action="/configuration/editor-edit/{{edit.id}}" method="POST">
+                <h5>Command</h5>
+                <input type="text" name="command" value="{{edit.command}}" required>
+                <h5>Phrase</h5>
+                <input type="text" name="text" value="{{edit.text}}" required>
+                <input type="submit" value="Edit">
+            </form>
+        </div>
+    </section>
+    {{> footer}}
+</body>
+
+</html>

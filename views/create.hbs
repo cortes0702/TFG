@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Configuration Max</title>
+    <link rel="icon" type="image/x-icon" href="../img/favicon.ico">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link rel="stylesheet" href="/stylesheets/create.css">
+</head>
+
+<body>
+    {{> navbar}}
+    <br>
+    <section id="bodyCreate">
+        <div class="card">
+            <h1 class="title">Create Max command</h1>
+            <form action="/configuration/create-add" method="POST">
+                <h5>Command</h5>
+                <input type="text" name="command" required>
+                <h5>Phrase</h5>
+                <input type="text" name="text" required>
+                <input type="submit" value="Create">
+            </form>
+        </div>
+    </section>
+    {{> footer}}
+</body>
+
+</html>

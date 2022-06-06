@@ -1,0 +1,128 @@
+#bodySupport {
+    display: block;
+    margin: 5% auto 2% auto;
+    width: 80%;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 20px;
+}
+
+.box1 {
+    display: flex;
+    justify-content: space-between;
+    margin: auto;
+    height: 30vh;
+    background-color: #f0f0f0;
+}
+
+.box1 .box1-1 {
+    display: block;
+    padding: 2%;
+    margin: auto;
+}
+
+.box1 .box1-2 {
+    background: url('https://www.gb-advisors.com/wp-content/uploads/2022/01/Freshdesk-Support-Desk-illustration.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position-y: initial;
+    width: 100%;
+}
+
+.box2 {
+    display: flex;
+    justify-content: space-around;
+    margin: auto;
+    background-color: #f0f0f0;
+    margin-top: 40px;
+}
+
+.box2-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-left: 1px solid #c7c7c7;
+    width: 33%;
+    margin-top: 48px;
+    margin-bottom: 48px;
+}
+
+.box2-card:first-child {
+    border-left: 0;
+}
+
+.box2-card:last-child {
+    margin-top: 60px;
+}
+
+.box2-card p {
+    text-align: center;
+}
+
+.img {
+    width: 65px;
+}
+
+.send {
+    display: flex;
+    justify-content: center;
+    margin: auto;
+}
+
+.send a {
+    text-decoration: none;
+    color: dodgerblue;
+}
+
+.send span {
+    color: dodgerblue;
+}
+
+/*TABLET*/
+@media only screen and (max-width: 1024px) {
+    #bodySupport {
+        margin-top: 12%;
+    }
+
+    .box2 {
+        display: block;
+    }
+
+    .box2-card {
+        border-left: 0;
+        border-top: 1px solid #c7c7c7;
+        width: auto;
+        padding-top: 5%;
+    }
+
+    .box2-card:first-child {
+        border-top: 0;
+    }
+}
+
+/*MÓVIL*/
+@media only screen and (max-width: 600px) {
+    #bodySupport {
+        margin-top: 15%;
+    }
+
+    .box1 {
+        display: block;
+        text-align: center;
+        height: auto;
+    }
+
+    .box2 {
+        display: block;
+    }
+
+    .box2-card {
+        border-left: 0;
+        border-top: 1px solid #c7c7c7;
+        width: auto;
+        padding-top: 5%;
+    }
+
+    .box2-card:first-child {
+        border-top: 0;
+    }
+}

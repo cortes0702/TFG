@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Configuration Max</title>
+    <link rel="icon" type="image/x-icon" href="../img/favicon.ico">
+    <link rel="stylesheet" href="/stylesheets/configuration.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+</head>
+
+<body>
+    {{> navbar}}
+    <br>
+    <section class="body">
+        <p>Welcome, <span>{{user.username}}</span></p>
+        <section id="bodyConfiguration">
+            <div class="header-tools">
+                <div class="tools">
+                    <ul>
+                        <li>
+                            <a href="/configuration/create">
+                                <button class="add">
+                                    <i class="material-icons">add_circle</i>
+                                </button>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="search">
+                    <i class="material-icons search-input">search</i>
+                    <input type="text" name="" id="seeker" class="search-input">
+                </div>
+            </div>
+            <table class="datatable">
+                <thead>
+                    <tr>
+                        <th></th>
+                        <th>Keyword</th>
+                        <th>Phrase</th>
+                        <th></th>
+                        <th></th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {{#each data}}
+                    <tr class="article">
+                        <td><span class="available"></span></td>
+                        <td>{{command}}</td>
+                        <td>{{text}}</td>
+                        <td>
+                            <a href="/configuration/editor/{{_id}}">
+                                <button style="color:lightsteelblue">
+                                    <i class="material-icons">edit</i>
+                                </button>
+                            </a>
+                        </td>
+                        <td>
+                            <form action="/configuration/delete/{{_id}}?_method=DELETE" method="POST">
+                                <input type="hidden" name="_method" id="DELETED">
+                                <button style="color:tomato">
+                                    <i class="material-icons">delete_forever</i>
+                                </button>
+                            </form>
+                        </td>
+                    </tr>
+                    {{/each}}
+                </tbody>
+            </table>
+        </section>
+    </section>
+    {{> footer}}
+</body>
+<script src="../javascripts/configuration.js"></script>
+
+</html>

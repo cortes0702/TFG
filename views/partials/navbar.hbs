@@ -1,0 +1,283 @@
+<header id="container">
+  <section id="nav">
+    <a href="/"><img src="../img/logo.png" alt="Main Logo" id="logo" /></a>
+    <ul class="links">
+      <a href="/about" id="a">About Max</a>
+      <a href="/support" id="a">Custom support</a>
+      <a href="/news" id="a">Max News</a><b id="mh-header"></b>
+      {{#if user}}
+        <a href="/configuration" id="a">Configuration</a>
+        <a href="/log-out" id="a">Log out</a>
+      {{else}}
+        <a href="/sign-in" id="a">Sign in</a>
+        <a href="/sign-up" id="a">Sign up</a>
+      {{/if}}
+    </ul>
+    <button class="ham" type="button" onclick="des()">
+      <span class="br-1"></span>
+      <span class="br-2"></span>
+      <span class="br-3"></span>
+    </button>
+  </section>
+</header>
+
+<script>
+  const des = () => {
+    const links = document.querySelector(".links");
+    const barras = document.querySelectorAll(".ham span");
+    links.classList.toggle("activated");
+    barras.forEach((child) => {
+      child.classList.toggle("animated");
+    });
+  }
+</script>
+
+<style>
+  #container {
+    width: 99%;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+  }
+
+  #nav {
+    width: 100%;
+    margin: auto;
+    padding-top: 1%;
+    padding-bottom: 1%;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    background-color: rgba(255, 255, 255, 0.637);
+    position: absolute;
+  }
+
+  #logo {
+    width: 105px;
+    cursor: pointer;
+  }
+
+  #a {
+    list-style-type: none;
+    display: inline-block;
+    margin: 0 20px;
+    position: relative;
+    text-decoration: none;
+    color: rgb(0, 0, 0);
+    font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+    font-size: 1.1rem;
+    cursor: pointer;
+  }
+
+  #a::before {
+    content: "";
+    height: 2px;
+    width: 0%;
+    background: rgb(179, 0, 0);
+    position: absolute;
+    left: 0;
+    bottom: -8px;
+    transition: 0.3s ease-out;
+  }
+
+  #a:hover::before {
+    width: 100%;
+  }
+
+  #a:hover {
+    transition: 0.4s ease-out;
+    color: rgb(179, 0, 0);
+  }
+
+  #a.a-exact-active {
+    color: rgb(179, 0, 0);
+  }
+
+  #mh-header {
+    border-left: 3px solid black;
+  }
+
+  .ham {
+    display: none;
+    cursor: pointer;
+    border: none;
+    margin: 0;
+    padding: 0;
+    background-color: transparent;
+  }
+
+  .ham span {
+    display: block;
+    background-color: #000000c5;
+    height: 3px;
+    width: 28px;
+    margin: 9px auto;
+    border-radius: 2px;
+  }
+
+  /*TABLET*/
+  @media only screen and (max-width: 1024px) {
+    #nav {
+      justify-content: space-between;
+    }
+
+    #mh-header {
+      display: none;
+    }
+
+    #logo {
+      padding-top: 10px;
+      padding-left: 20px;
+    }
+
+    .ham {
+      display: block;
+      position: absolute;
+      top: 12px;
+      right: 25px;
+      transition: 0.2s 0.1s;
+    }
+
+    #nav {
+      flex-direction: column;
+      align-items: flex-start;
+      background-color: rgba(255, 255, 255, 0.952);
+    }
+
+    .ham:hover {
+      transform: rotate(360deg);
+    }
+
+    .links {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-around;
+      align-items: center;
+      height: 90vh;
+      margin: 0;
+      padding: 0;
+      width: 100%;
+      display: none;
+    }
+
+    .links #a {
+      width: 100%;
+      text-align: center;
+    }
+
+    #a::before {
+      background: rgba(179, 0, 0, 0);
+    }
+
+    @keyframes showMenu {
+      from {
+        opacity: 0;
+      }
+
+      to {
+        opacity: 1;
+      }
+    }
+
+    .links.activated {
+      display: flex;
+      animation: showMenu 450ms ease-in-out both;
+    }
+
+    .br-1.animated {
+      transform: rotate(-45deg) translate(-8px, 7px);
+    }
+
+    .br-2.animated {
+      opacity: 0;
+    }
+
+    .br-3.animated {
+      transform: rotate(45deg) translate(-10px, -8px);
+    }
+  }
+
+  /*MÓVIL*/
+  @media only screen and (max-width: 600px) {
+    #nav {
+      justify-content: space-between;
+    }
+
+    #mh-header {
+      display: none;
+    }
+
+    #logo {
+      padding-top: 10px;
+      padding-left: 20px;
+    }
+
+    .ham {
+      display: block;
+      position: absolute;
+      top: 12px;
+      right: 25px;
+      left: auto;
+      transition: 0.2s 0.1s;
+    }
+
+    #nav {
+      flex-direction: column;
+      align-items: flex-start;
+      background-color: rgba(255, 255, 255, 0.952);
+    }
+
+    .ham:hover {
+      transform: rotate(360deg);
+    }
+
+    .links {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-around;
+      align-items: center;
+      height: 90vh;
+      margin: 0;
+      padding: 0;
+      width: 100%;
+      display: none;
+    }
+
+    .links #a {
+      width: 100%;
+      text-align: center;
+    }
+
+    #a::before {
+      background: rgba(179, 0, 0, 0);
+    }
+
+    @keyframes showMenu {
+      from {
+        opacity: 0;
+      }
+
+      to {
+        opacity: 1;
+      }
+    }
+
+    .links.activated {
+      display: flex;
+      animation: showMenu 350ms ease-in-out both;
+    }
+
+    .br-1.animated {
+      transform: rotate(-45deg) translate(-8px, 7px);
+    }
+
+    .br-2.animated {
+      opacity: 0;
+    }
+
+    .br-3.animated {
+      transform: rotate(45deg) translate(-10px, -8px);
+    }
+  }
+</style>

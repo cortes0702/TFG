@@ -1,0 +1,132 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans&display=swap');
+
+.body {
+    display: block;
+    font-family: 'Noto Sans', sans-serif;
+    margin-top: 100px;
+}
+
+.body p {
+    margin-right: 10%;
+    text-align: end;
+}
+
+.body p span {
+    font-weight: 900;
+}
+
+.material-icons {
+    font-size: 16px;
+}
+
+#bodyConfiguration {
+    background-color: #2a3338;
+    border-radius: 3px;
+    color: white;
+    width: 80%;
+    margin: auto auto 2% auto;
+    font-size: 12px;
+}
+
+#bodyConfiguration .header-tools {
+    border-bottom: solid 1px rgb(61, 68, 73);
+    padding-inline: 12px;
+    display: flex;
+    align-items: center;
+}
+
+#bodyConfiguration .header-tools .search {
+    display: contents;
+    justify-content: center;
+    margin: auto;
+    width: 30%;
+}
+
+input {
+    display: flex;
+    justify-content: center;
+    margin-top: 2%;
+    margin-bottom: 2%;
+    margin-left: 1%;
+    width: 25%;
+    padding: 5px;
+    outline: none;
+    border: 3px solid #CCD1E4;
+    border-radius: 3px;
+    font-weight: 600;
+}
+
+#bodyConfiguration .header-tools .tools {
+    width: 70%;
+}
+
+#bodyConfiguration .header-tools .tools ul {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: start;
+    align-items: baseline;
+}
+
+#bodyConfiguration .header-tools .tools ul li {
+    display: inline-block;
+    margin: 0 2px;
+    align-items: baseline;
+}
+
+#bodyConfiguration .header-tools .tools ul li button:hover {
+    color: whitesmoke;
+}
+
+#bodyConfiguration .header-tools .tools ul li button {
+    padding: 6px 12px;
+}
+
+#bodyConfiguration .datatable {
+    border-collapse: collapse;
+    width: 100%;
+}
+
+#bodyConfiguration .datatable,
+#bodyConfiguration .datatable th,
+#bodyConfiguration .datatable td {
+    padding: 12px 12px;
+}
+
+#bodyConfiguration .datatable th {
+    font-weight: bolder;
+    text-align: left;
+    border-bottom: solid 1px rgb(61, 68, 73);
+}
+
+#bodyConfiguration .datatable td {
+    border-bottom: solid 1px rgb(61, 68, 73);
+}
+
+button {
+    color: white;
+    width: 100%;
+    box-sizing: border-box;
+    border: 0;
+    border-radius: 3px;
+    background: transparent;
+    cursor: pointer;
+}
+
+.filter {
+    display: none;
+}
+
+/*TABLET*/
+@media only screen and (max-width: 1024px) {
+    .body {
+        margin-top: 70px;
+    }
+}
+
+/*MÓVIL*/
+@media only screen and (max-width: 600px) {
+    .body {
+        margin-top: 70px;
+    }
+}

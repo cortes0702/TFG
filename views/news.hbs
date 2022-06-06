@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Max News</title>
+    <link rel="icon" type="image/x-icon" href="../img/favicon.ico">
+    <link rel="stylesheet" href="/stylesheets/news.css">
+</head>
+
+<body>
+    {{> navbar}}
+    <br>
+    <input type="text" name="seeker" id="seeker" placeholder="Search...">
+    <section id="bodyNews">
+        
+        {{#each list}}
+        <section id="news" class="article">
+            <section id="news-flex">
+                <img src="{{urlToImage}}">
+                <section id="news-block">
+                    <h4>{{title}}</h4>
+                    <p>{{description}}</p>
+                </section>
+            </section>
+        </section>
+        {{/each}}
+    </section>
+    {{> footer}}
+</body>
+<script src="../javascripts/news.js"></script>
+
+</html>

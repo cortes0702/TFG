@@ -1,0 +1,177 @@
+#bodyAbout {
+    width: 100%;
+    margin: 0;
+}
+
+#box1 img {
+    width: 100%;
+}
+
+#box2 {
+    width: 100%;
+    display: block;
+    justify-content: center;
+    text-align: center;
+    margin: auto;
+    padding-bottom: 1.5%;
+}
+
+#box2 img {
+    width: 10%;
+}
+
+#box2 h3 {
+    font-size: 25px;
+    font-weight: 600;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+#box2 p {
+    font-size: 20px;
+    font-weight: 200;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+#box3 {
+    width: 100%;
+    background-color: #ececec;
+}
+
+#slides {
+    width: 65%;
+    margin: auto;
+    overflow: hidden;
+    padding-top: 1.5%;
+    padding-bottom: 1.5%;
+}
+
+#slides ul {
+    display: flex;
+    padding: 0;
+    width: 400%;
+    animation: change 20s infinite alternate linear;
+}
+
+#slides li {
+    width: 100%;
+    list-style: none;
+}
+
+#slides img {
+    width: 100%;
+    border-radius: 5px;
+}
+
+#box4 {
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    text-align: center;
+    margin: auto;
+    margin-bottom: 2%;
+    margin-top: 1%;
+}
+
+#box4 img {
+    border-radius: 50%;
+    margin-top: 1%;
+}
+
+#box4-text {
+    margin-top: 7%;
+}
+
+#box4-text h3 {
+    font-size: 25px;
+    font-weight: 600;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+#box4-text p {
+    font-size: 20px;
+    font-weight: 200;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+#box4 #box4-text p span {
+    color: red;
+}
+
+/*TABLET*/
+@media only screen and (max-width: 1024px) {
+    #box2 img {
+        width: 18%;
+    }
+
+    #box4 img {
+        width: 35%;
+        border-radius: 50%;
+        margin: 2% 3% auto 3%;
+    }
+
+    #box4-text {
+        margin: auto;
+    }
+}
+
+/*MÓVIL*/
+@media only screen and (max-width: 600px) {
+    #box2 {
+        width: 90%;
+    }
+    
+    #box2 img {
+        width: 35%;
+    }
+
+    #slides {
+        width: 90%;
+    }
+
+    #box4 {
+        display: flex;
+        flex-direction: column-reverse;
+    }
+
+    #box4-text {
+        width: 80%;
+    }
+
+    #box4 img {
+        margin: auto;
+    }
+}
+
+@keyframes change {
+    0% {
+        margin-left: 0;
+    }
+
+    20% {
+        margin-left: 0;
+    }
+
+    25% {
+        margin-left: -100%;
+    }
+
+    45% {
+        margin-left: -100%;
+    }
+
+    50% {
+        margin-left: -200%;
+    }
+
+    70% {
+        margin-left: -200%;
+    }
+
+    75% {
+        margin-left: -300%;
+    }
+
+    100% {
+        margin-left: -300%;
+    }
+}
